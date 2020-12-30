@@ -1,0 +1,21 @@
+// 多行文字显示省略号
+@mixin ellipsisMultiline($number: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $number;
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

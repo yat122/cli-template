@@ -1,0 +1,101 @@
+@import "./var.scss";
+// 文字对齐
+$display: block, inline-block, flex, inline-flex;
+@each $d in $display {
+  .#{$d} {
+    display: $d;
+  }
+}
+
+$size: 12, 13, 14, 15, 16;
+@each $s in $size {
+  .f#{$s} {
+    font-size: #{$s}px;
+  }
+}
+
+$align: left, center, right, justify;
+@each $str in $align {
+  .align-#{$str} {
+    text-align: $str;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+// 单行文字显示省略号
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.flex-center {
+  @extend %flex-center;
+}
+
+.flex-between {
+  @extend %flex-between;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.oh {
+  overflow: hidden;
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 0; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+.oa {
+  overflow: auto;
+}
+
+.hidden {
+  display: none;
+}
