@@ -1,4 +1,4 @@
-import { on } from "@/public/util";
+import { on } from "@/public/util/dom";
 
 const nodeList = [];
 const ctx = "@@clickoutsideContext";
